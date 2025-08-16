@@ -1,0 +1,9 @@
+
+/* Glassmorphism utility: fallback if Tailwind isn't enough */
+.glass-morphism {
+  backdrop-filter: blur(24px) saturate(125%);
+  background: rgba(35, 39, 60, 0.75);
+  border-radius: 16px;
+  border: 1px solid rgba(65, 68, 109, 0.11);
+  box-shadow: 0 4px 38px -3px rgba(13, 18, 66, 0.16);
+}
