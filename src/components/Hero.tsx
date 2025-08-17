@@ -84,7 +84,7 @@ export default function Hero() {
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#00f0ff] via-[#5f5eff] to-[#a726e8] p-1 animate-[spin_8s_linear_infinite]" />
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#00f0ff] to-[#a726e8] opacity-50 blur-lg" />
           <img
-            src="/lovable-uploads/839d78df-9ba8-4203-b3a5-4b260f8cb82b.png"
+            src="/pics/Joshua1.png"
             alt="J Joshua Haniel"
             className="w-40 h-40 rounded-full object-cover border-4 border-[#00f0ff] shadow-[0_0_20px_rgba(0,240,255,0.7)] relative z-10 bg-black/40"
             loading="eager"
