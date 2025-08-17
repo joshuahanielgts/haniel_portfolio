@@ -18,7 +18,7 @@ const PROJECTS = [
     tags: ["AI", "YOLO", "Computer Vision", "Python", "OpenCV"],
   },
   {
-    name: "RoomRoster",
+    name: "Hostel Management System",
     description:
       "Comprehensive hostel management system: student registration, booking, complaints, feedback, and full admin monitoring. Enables efficient day-to-day operations for college hostels.",
     url: "https://github.com/joshuahanielgts/Hostel-Management-System",
