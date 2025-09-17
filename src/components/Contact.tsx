@@ -99,7 +99,12 @@ export default function Contact() {
                   Name
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="Your Name" autoComplete="name" {...field} />
+                  <Input 
+                    placeholder="Your Name" 
+                    autoComplete="name" 
+                    className="bg-[#1a1f3388] border-[#5f5eff44] text-white placeholder:text-zinc-400 focus:border-[#00f0ff] focus:ring-[#00f0ff]"
+                    {...field} 
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -120,6 +125,7 @@ export default function Contact() {
                     placeholder="your@email.com"
                     autoComplete="email"
                     type="email"
+                    className="bg-[#1a1f3388] border-[#5f5eff44] text-white placeholder:text-zinc-400 focus:border-[#00f0ff] focus:ring-[#00f0ff]"
                     {...field}
                   />
                 </FormControl>
@@ -141,6 +147,7 @@ export default function Contact() {
                   <Textarea
                     placeholder="How can I help you?"
                     rows={5}
+                    className="bg-[#1a1f3388] border-[#5f5eff44] text-white placeholder:text-zinc-400 focus:border-[#00f0ff] focus:ring-[#00f0ff] resize-none"
                     {...field}
                   />
                 </FormControl>
@@ -152,7 +159,7 @@ export default function Contact() {
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full bg-[#5f5eff] text-white hover:bg-[#00fff2]"
+            className="w-full bg-[#5f5eff] text-white hover:bg-[#00f0ff] hover:text-[#0d1222] transition-all duration-300 font-orbitron tracking-wider"
           >
             Send Message
           </Button>
