@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import TechnicalAchievements from "@/components/TechnicalAchievements";
 import Projects from "@/components/Projects";
 import SocialLinks from "@/components/SocialLinks";
 import Contact from "@/components/Contact";
@@ -65,6 +66,12 @@ const Index = () => {
 
         <section id="skills">
           <Skills />
+        </section>
+
+        <SectionDivider />
+
+        <section id="achievements">
+          <TechnicalAchievements />
         </section>
 
         <SectionDivider />
