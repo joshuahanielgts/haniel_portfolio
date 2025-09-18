@@ -5,6 +5,7 @@ import Section from "./Section";
 
 const ACHIEVEMENTS = [
   {
+    college: "MIT Chennai",
     title: "SAMHITA Hackathon Winner",
     position: "1st Place",
     icon: Trophy,
@@ -13,6 +14,7 @@ const ACHIEVEMENTS = [
     gradient: "from-yellow-400 to-orange-500"
   },
   {
+    college: "SRMVDP",
     title: "ACEHACKS Runner-up",
     position: "2nd Place", 
     icon: Award,
@@ -101,6 +103,11 @@ function AchievementCard({
 
       {/* Achievement Details */}
       <div className="relative z-10">
+        <div className="flex items-center gap-2 mb-2">
+          <div className="text-xs text-[#00f0ff] font-orbitron uppercase tracking-wider mb-1">
+            {achievement.college}
+          </div>
+        </div>
         <div className="flex items-center gap-2 mb-2">
           <h3 className="text-xl font-bold text-gray-100 font-orbitron">
             {achievement.title}

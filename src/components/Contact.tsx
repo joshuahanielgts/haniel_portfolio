@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { supabase } from "@/integrations/supabase/client";
 
 // UI Components
 import { Input } from "@/components/ui/input";
@@ -42,53 +43,51 @@ export default function Contact() {
     mode: "onTouched",
   });
 
-  function onSubmit(data: ContactFormValues) {
-    // Create a hidden <form> submission for Netlify
-    const formData = new FormData();
-    formData.append("form-name", "contact"); // Must match the form name
-    Object.entries(data).forEach(([key, value]) => {
-      formData.append(key, value);
-    });
+  async function onSubmit(data: ContactFormValues) {
+    try {
+      // Get additional metadata for spam prevention and analytics
+      const userAgent = navigator.userAgent;
+      
+      // Insert into Supabase
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([
+          {
+            name: data.name,
+            email: data.email,
+            message: data.message,
+            user_agent: userAgent,
+            // Note: IP address would need to be captured server-side for accuracy
+          }
+        ]);
 
-    fetch("/", {
-      method: "POST",
-      body: formData,
-    })
-      .then(() => {
-        toast({
-          title: "Success!",
-          description: "Your message has been sent.",
-        });
-        form.reset();
-      })
-      .catch(() => {
-        toast({
-          title: "Error",
-          description: "Failed to send message. Please try again.",
-          variant: "destructive",
-        });
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Success! ⚡",
+        description: "Your message has been sent successfully. I'll get back to you soon!",
       });
+      
+      form.reset();
+    } catch (error) {
+      console.error('Contact form submission error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    }
   }
 
   return (
     <Section id="contact" title="Contact">
       <Form {...form}>
         <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
           onSubmit={form.handleSubmit(onSubmit)}
           className="max-w-xl mx-auto space-y-5 px-4"
         >
-          {/* Required hidden input for Netlify */}
-          <input type="hidden" name="form-name" value="contact" />
-          <p hidden>
-            <label>
-              Don’t fill this out: <input name="bot-field" />
-            </label>
-          </p>
-
           {/* Name Field */}
           <FormField
             control={form.control}
