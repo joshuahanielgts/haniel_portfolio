@@ -120,7 +120,6 @@ export default function Navbar() {
           href="#" 
           className="text-lg font-orbitron font-bold tracking-wider uppercase flex items-center group"
         >
-          <Bolt className="mr-2 text-[#00f0ff] group-hover:text-[#5f5eff] transition-colors" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] to-[#5f5eff] group-hover:from-[#5f5eff] group-hover:to-[#a726e8] transition-all">
             J Joshua Haniel
           </span>
