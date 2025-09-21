@@ -2,7 +2,15 @@ import Section from "./Section";
 export default function About() {
   return <Section id="about" title="About">
       <div className="flex flex-col md:flex-row items-start gap-6">
-        <img src="/pics/Joshua2.jpg" alt="J Joshua Haniel" className="w-24 h-24 rounded-xl border-2 border-[#464cf3] shadow-xl object-cover mb-4 md:mb-0" />
+        <img 
+          src="/pics/Joshua2.jpg" 
+          alt="J Joshua Haniel - Computer Science Student at SRM University" 
+          title="J Joshua Haniel studying Computer Science at SRM University Chennai"
+          className="w-24 h-24 rounded-xl border-2 border-[#464cf3] shadow-xl object-cover mb-4 md:mb-0"
+          width="96"
+          height="96"
+          loading="lazy"
+        />
         <div className="text-left">
           <h2 className="text-2xl font-bold text-gray-100 mb-2">
             Hi, I am J. Joshua Haniel

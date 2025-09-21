@@ -86,8 +86,11 @@ export default function Hero() {
           <img
             src="/pics/Joshua1.png"
             alt="J Joshua Haniel"
+            title="J Joshua Haniel - AI Innovator & Full Stack Developer"
             className="w-40 h-40 rounded-full object-cover border-4 border-[#00f0ff] shadow-[0_0_20px_rgba(0,240,255,0.7)] relative z-10 bg-black/40"
             loading="eager"
+            width="160"
+            height="160"
           />
           
           {/* Cybernetic decorations */}
