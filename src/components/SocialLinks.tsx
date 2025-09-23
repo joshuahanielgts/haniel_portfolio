@@ -46,8 +46,6 @@ export default function SocialLinks() {
             href={s.url}
             target="_blank"
             rel="noopener noreferrer"
-            title={`Visit J Joshua Haniel's ${s.name} profile`}
-            aria-label={`Visit ${s.name} profile`}
             className="group flex items-center gap-2 px-4 py-2 bg-[#23253c] rounded-full shadow-lg text-[#7b74fd] text-lg font-semibold hover:bg-[#23253cf5] transition"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

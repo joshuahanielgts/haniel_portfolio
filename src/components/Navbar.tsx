@@ -118,8 +118,6 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <a 
           href="#" 
-          title="J Joshua Haniel - Home"
-          aria-label="Go to homepage"
           className="text-lg font-orbitron font-bold tracking-wider uppercase flex items-center group"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] to-[#5f5eff] group-hover:from-[#5f5eff] group-hover:to-[#a726e8] transition-all">

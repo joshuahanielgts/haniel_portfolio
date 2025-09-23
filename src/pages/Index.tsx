@@ -42,7 +42,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#050a14] flex flex-col items-center justify-start dark relative overflow-x-hidden" role="main">
+    <div className="min-h-screen bg-[#050a14] flex flex-col items-center justify-start dark relative overflow-x-hidden">
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00f0ff] to-[#5f5eff] z-50 origin-left"
         style={{ scaleX: scrollYProgress }}
@@ -52,38 +52,38 @@ const Index = () => {
       <CyberpunkBackground />
       <Navbar />
 
-      <main className="w-full max-w-3xl sm:max-w-6xl mx-auto z-10 relative px-4 pt-20" role="main">
-        <section id="home" aria-label="Home section">
+      <main className="w-full max-w-3xl sm:max-w-6xl mx-auto z-10 relative px-4 pt-20">
+        <section id="home">
           <Hero />
         </section>
 
         <SectionDivider />
 
-        <section id="about" aria-label="About section">
+        <section id="about">
           <About />
         </section>
 
         <SectionDivider />
 
-        <section id="skills" aria-label="Skills section">
+        <section id="skills">
           <Skills />
         </section>
 
         <SectionDivider />
 
-        <section id="achievements" aria-label="Technical achievements section">
+        <section id="achievements">
           <TechnicalAchievements />
         </section>
 
         <SectionDivider />
 
-        <section id="projects" aria-label="Projects section">
+        <section id="projects">
           <Projects />
         </section>
 
         <SectionDivider />
 
-        <section id="contact" aria-label="Contact section">
+        <section id="contact">
           <Contact />
         </section>
 

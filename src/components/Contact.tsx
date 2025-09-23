@@ -2,7 +2,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { supabase } from "@/integrations/supabase/client";
 
 // UI Components
 import { Input } from "@/components/ui/input";
@@ -45,25 +44,8 @@ export default function Contact() {
 
   async function onSubmit(data: ContactFormValues) {
     try {
-      // Get additional metadata for spam prevention and analytics
-      const userAgent = navigator.userAgent;
-      
-      // Insert into Supabase
-      const { error } = await supabase
-        .from('contact_submissions')
-        .insert([
-          {
-            name: data.name,
-            email: data.email,
-            message: data.message,
-            user_agent: userAgent,
-            // Note: IP address would need to be captured server-side for accuracy
-          }
-        ]);
-
-      if (error) {
-        throw error;
-      }
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       toast({
         title: "Success! ⚡",
