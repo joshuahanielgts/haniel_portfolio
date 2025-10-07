@@ -1,10 +1,11 @@
 import React from "react";
 import { Github, Linkedin, Bolt } from "lucide-react";
 import { motion } from "framer-motion";
+import FloatingTechIcons from "./FloatingTechIcons";
 
 const heroHeadlines = [
   "Software Project Manager",
-  "AIML Innovator", 
+  "AIML Innovator",
   "Hackathon Champion",
   "CS Projects Enthusiast",
   "AI Tools Expert"
@@ -13,6 +14,7 @@ const heroHeadlines = [
 export default function Hero() {
   return (
     <section className="relative py-12 flex flex-col items-center w-full select-none">
+      <FloatingTechIcons />
       {/* Glitch effects and cybernetic circles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         {/* Animated glow circles */}
