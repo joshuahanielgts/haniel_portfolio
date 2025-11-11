@@ -1,7 +1,7 @@
 # 👨‍💻 J Joshua Haniel
 
 **AI Innovator | Full Stack Developer | Open Source Enthusiast**  
-📍 Chennai, India | 🎓 B.Tech CSE @ SRM IST, Vadapalani Campus (2nd Year)
+📍 Chennai, India | 🎓 B.Tech CSE @ SRM IST, Vadapalani Campus (3rd Year)
 
 ---
 
